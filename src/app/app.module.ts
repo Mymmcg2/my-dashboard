@@ -27,6 +27,7 @@ import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { MapsModule } from '@syncfusion/ej2-angular-maps';
 
 import { IconDefinition } from '@ant-design/icons-angular';
 import {
@@ -53,6 +54,7 @@ import { TransactionCardComponent } from './dashboard-sale/transaction-card/tran
 import { NewsUpdateCardComponent } from './dashboard-sale/news-update-card/news-update-card.component';
 import { AccountInfoCardComponent } from './dashboard-sale/account-info-card/account-info-card.component';
 import { DatePickerCardComponent } from './dashboard-sale/date-picker-card/date-picker-card.component';
+import { TopGlobalSaleComponent } from './dashboard-sale/top-global-sale/top-global-sale.component';
 
 const icons: IconDefinition[] = [
   ShoppingFill,
@@ -86,6 +88,7 @@ registerLocaleData(en);
     NewsUpdateCardComponent,
     AccountInfoCardComponent,
     DatePickerCardComponent,
+    TopGlobalSaleComponent,
   ],
   imports: [
     BrowserModule,
@@ -107,7 +110,8 @@ registerLocaleData(en);
     NzProgressModule,
     NzListModule,
     NzDropDownModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    MapsModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

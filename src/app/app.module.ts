@@ -58,6 +58,7 @@ import { TopGlobalSaleComponent } from './dashboard-sale/top-global-sale/top-glo
 import { InvoiceTableCardComponent } from './dashboard-sale/invoice-table-card/invoice-table-card.component';
 import { TopSellingTableComponent } from './dashboard-sale/top-selling-table/top-selling-table.component';
 import { PopularProductTableComponent } from './dashboard-sale/popular-product-table/popular-product-table.component';
+import { MarketValusCardComponent } from './dashboard-sale/market-valus-card/market-valus-card.component';
 
 const icons: IconDefinition[] = [
   ShoppingFill,
@@ -95,6 +96,7 @@ registerLocaleData(en);
     InvoiceTableCardComponent,
     TopSellingTableComponent,
     PopularProductTableComponent,
+    MarketValusCardComponent,
   ],
   imports: [
     BrowserModule,

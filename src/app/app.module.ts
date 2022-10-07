@@ -57,6 +57,7 @@ import { DatePickerCardComponent } from './dashboard-sale/date-picker-card/date-
 import { TopGlobalSaleComponent } from './dashboard-sale/top-global-sale/top-global-sale.component';
 import { InvoiceTableCardComponent } from './dashboard-sale/invoice-table-card/invoice-table-card.component';
 import { TopSellingTableComponent } from './dashboard-sale/top-selling-table/top-selling-table.component';
+import { PopularProductTableComponent } from './dashboard-sale/popular-product-table/popular-product-table.component';
 
 const icons: IconDefinition[] = [
   ShoppingFill,
@@ -93,6 +94,7 @@ registerLocaleData(en);
     TopGlobalSaleComponent,
     InvoiceTableCardComponent,
     TopSellingTableComponent,
+    PopularProductTableComponent,
   ],
   imports: [
     BrowserModule,

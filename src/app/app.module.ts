@@ -55,6 +55,8 @@ import { NewsUpdateCardComponent } from './dashboard-sale/news-update-card/news-
 import { AccountInfoCardComponent } from './dashboard-sale/account-info-card/account-info-card.component';
 import { DatePickerCardComponent } from './dashboard-sale/date-picker-card/date-picker-card.component';
 import { TopGlobalSaleComponent } from './dashboard-sale/top-global-sale/top-global-sale.component';
+import { InvoiceTableCardComponent } from './dashboard-sale/invoice-table-card/invoice-table-card.component';
+import { TopSellingTableComponent } from './dashboard-sale/top-selling-table/top-selling-table.component';
 
 const icons: IconDefinition[] = [
   ShoppingFill,
@@ -89,6 +91,8 @@ registerLocaleData(en);
     AccountInfoCardComponent,
     DatePickerCardComponent,
     TopGlobalSaleComponent,
+    InvoiceTableCardComponent,
+    TopSellingTableComponent,
   ],
   imports: [
     BrowserModule,

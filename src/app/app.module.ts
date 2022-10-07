@@ -23,6 +23,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzSegmentedModule } from 'ng-zorro-antd/segmented';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
 
 import { IconDefinition } from '@ant-design/icons-angular';
 import {
@@ -89,7 +90,8 @@ registerLocaleData(en);
     NzButtonModule,
     NzTableModule,
     NzTagModule,
-    NzSegmentedModule
+    NzSegmentedModule,
+    NzProgressModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

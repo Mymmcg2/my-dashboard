@@ -1,1 +1,15 @@
-<p>summary-card works!</p>
+<div class="wrapper">
+    <div nz-row style="margin-bottom: 15px;">
+        <div nz-col nzSpan="12">
+            <h4>Daily Sales</h4>
+        </div>
+        <div nz-col nzSpan="12" style="text-align: right;">
+            <span nz-icon nzType="more" nzTheme="outline" style="font-size: 20px; color: gray;"></span>
+        </div>
+    </div>
+    <div>
+        <nz-progress [nzPercent]="25" nzStrokeColor="orange" nzStatus="active"></nz-progress>
+        <nz-progress [nzPercent]="75" nzStatus="active"></nz-progress>
+        <nz-progress [nzPercent]="34" nzStrokeColor="green" nzStatus="active"></nz-progress>
+    </div>
+</div>

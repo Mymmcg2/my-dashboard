@@ -39,7 +39,8 @@ import {
   BoldOutline,
   DollarOutline,
   CalendarOutline,
-  MoreOutline
+  MoreOutline,
+  ArrowUpOutline
 } from '@ant-design/icons-angular/icons';
 import { MenuSideComponent } from './menu-side/menu-side.component';
 import { DashboardSaleComponent } from './dashboard-sale/dashboard-sale.component';
@@ -59,6 +60,7 @@ import { InvoiceTableCardComponent } from './dashboard-sale/invoice-table-card/i
 import { TopSellingTableComponent } from './dashboard-sale/top-selling-table/top-selling-table.component';
 import { PopularProductTableComponent } from './dashboard-sale/popular-product-table/popular-product-table.component';
 import { MarketValusCardComponent } from './dashboard-sale/market-valus-card/market-valus-card.component';
+import { TotalSaleUnitComponent } from './dashboard-sale/total-sale-unit/total-sale-unit.component';
 
 const icons: IconDefinition[] = [
   ShoppingFill,
@@ -71,7 +73,8 @@ const icons: IconDefinition[] = [
   BoldOutline,
   DollarOutline,
   CalendarOutline,
-  MoreOutline];
+  MoreOutline,
+  ArrowUpOutline];
 
 registerLocaleData(en);
 
@@ -97,6 +100,7 @@ registerLocaleData(en);
     TopSellingTableComponent,
     PopularProductTableComponent,
     MarketValusCardComponent,
+    TotalSaleUnitComponent,
   ],
   imports: [
     BrowserModule,

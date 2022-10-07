@@ -1,0 +1,20 @@
+<div nz-row style="background-color: white; height: 102px; padding-right: 20px; padding-left: 20px;" nzAlign="middle">
+    <div nz-col nzSpan="12">
+        <nz-input-group nzSize="large" [nzSuffix]="suffixIconSearch" style="max-width: 310px;">
+            <input type="text" nz-input placeholder="input search text" />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+            <span nz-icon nzType="search"></span>
+        </ng-template>
+    </div>
+    <div nz-col nzSpan="12" style="text-align: right;">
+        <nz-badge nzDot="dot">
+            <a class="head-example"></a>
+        </nz-badge>
+        <nz-badge nzDot="dot">
+            <a class="head-example"></a>
+        </nz-badge>
+        <nz-avatar nzSize="large" nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png">
+        </nz-avatar>
+    </div>
+</div>

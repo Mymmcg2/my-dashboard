@@ -1,0 +1,38 @@
+.header-contain {
+    padding-left: 15px;
+    height: 64px;
+    background-color: #252733;
+}
+
+.view-folder-icon {
+    background-color: orange;
+    color: white;
+    height: 44px;
+    width: 44px;
+    border-radius: 30px;
+    line-height: 44px;
+    font-size: 21px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.view-folder-icon:hover{
+    opacity: 0.8;
+}
+
+
+.shopping-icon {
+    background-color: green;
+    color: white;
+    height: 44px;
+    width: 44px;
+    border-radius: 30px;
+    line-height: 44px;
+    font-size: 21px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.shopping-icon:hover{
+    opacity: 0.8;
+}

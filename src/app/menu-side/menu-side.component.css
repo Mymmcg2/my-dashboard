@@ -1,0 +1,14 @@
+.sidebar-logo{
+    cursor: pointer;
+}
+
+[nz-menu]{
+    font-size: 18px;
+    border: none;
+}
+
+.sidebar-logo{
+    text-align: center;
+    margin-top: 33px;
+    margin-bottom: 30px;
+}

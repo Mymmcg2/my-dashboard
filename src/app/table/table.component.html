@@ -1,0 +1,55 @@
+<div class="wrapper">
+    <div class="container-table" style="margin-bottom: 22px;">
+        <h4>Data table</h4>
+    </div>
+    <div nz-row style="margin-bottom: 41px;">
+        <div nz-col nzSpan="12">
+            <h2>Table</h2>
+        </div>
+        <div nz-col nzSpan="12" style="text-align: right;">
+            <nz-input-group nzSize="large" nzSearch [nzAddOnAfter]="suffixIconButton"
+                style="width: 50%;margin-right: 10px;">
+                <input type="text" nz-input placeholder="input search text" />
+            </nz-input-group>
+            <ng-template #suffixIconButton>
+                <button nz-button nzType="primary" nzSearch><span nz-icon nzType="search"></span></button>
+            </ng-template>
+            <button nz-button nzSize="large" nzType="primary">Add New</button>
+        </div>
+    </div>
+    <div class="data-table">
+        <nz-table #fixedTable [nzData]="listOfData" nzTableLayout="fixed" [nzPageSize]="8">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Teacher</th>
+                    <th>Lesson</th>
+                    <th>Enrolled</th>
+                    <th>Price</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of fixedTable.data">
+                    <td>{{ data.title }}</td>
+                    <td>{{ data.category }}</td>
+                    <td nzEllipsis>{{ data.teacher }}</td>
+                    <td nzEllipsis>{{ data.lesson }}</td>
+                    <td nzEllipsis>{{ data.enrolled }}</td>
+                    <td nzEllipsis>{{ data.price }}</td>
+                    <!-- <td nzEllipsis>{{ data.status }}</td> -->
+                    <td nzEllipsis>
+                        <nz-tag *ngIf="data.status === 'active'; else unactive " nzColor="success">active</nz-tag>
+                    </td>
+                    <ng-template #unactive>
+                        <td nzEllipsis>
+                            <nz-tag nzColor="error">unactive</nz-tag>
+                        </td>
+                    </ng-template>
+
+                </tr>
+            </tbody>
+        </nz-table>
+    </div>
+</div>

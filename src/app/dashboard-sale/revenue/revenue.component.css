@@ -1,0 +1,17 @@
+.wrapper{
+    padding: 20px;
+    background-color: white;
+}
+
+.flex-revenue-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.code-box-demo {
+    overflow-x: auto;
+}
+
+.code-box-demo .ant-segmented {
+    margin-bottom: 10px;
+}

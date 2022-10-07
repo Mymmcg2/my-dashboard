@@ -24,6 +24,8 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzTagModule } from 'ng-zorro-antd/tag';
 import { NzSegmentedModule } from 'ng-zorro-antd/segmented';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 import { IconDefinition } from '@ant-design/icons-angular';
 import {
@@ -45,6 +47,10 @@ import { RevenueComponent } from './dashboard-sale/revenue/revenue.component';
 import { CreateReportCardComponent } from './dashboard-sale/create-report-card/create-report-card.component';
 import { DailySaleCardComponent } from './dashboard-sale/daily-sale-card/daily-sale-card.component';
 import { SummaryCardComponent } from './dashboard-sale/summary-card/summary-card.component';
+import { TotalOrderComponent } from './dashboard-sale/total-order/total-order.component';
+import { TransactionCardComponent } from './dashboard-sale/transaction-card/transaction-card.component';
+import { NewsUpdateCardComponent } from './dashboard-sale/news-update-card/news-update-card.component';
+import { AccountInfoCardComponent } from './dashboard-sale/account-info-card/account-info-card.component';
 
 const icons: IconDefinition[] = [
   ShoppingFill,
@@ -73,6 +79,10 @@ registerLocaleData(en);
     CreateReportCardComponent,
     DailySaleCardComponent,
     SummaryCardComponent,
+    TotalOrderComponent,
+    TransactionCardComponent,
+    NewsUpdateCardComponent,
+    AccountInfoCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,7 +101,9 @@ registerLocaleData(en);
     NzTableModule,
     NzTagModule,
     NzSegmentedModule,
-    NzProgressModule
+    NzProgressModule,
+    NzListModule,
+    NzDropDownModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

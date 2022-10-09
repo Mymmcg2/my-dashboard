@@ -1,28 +1,49 @@
 <div>
-    <div nz-row style="background-color: #64c5b1; padding: 25px; height: 160px;">
-        <div class="box-green-col-1" nz-col nzSpan="12">
-            <h1>Dashboard</h1>
-            <p style="color: white;">Salessa > Dashboard > Sales</p>
+    <div class="grid-container">
+        <div class="grid-revenue">
+            <app-revenue></app-revenue>
         </div>
-        <div nz-col nzSpan="12" style="text-align: right;">
-            <button nz-button nzShape="round" nzSize="large" nzType="default">Create Report</button>
+        <div class="grid-sale-unit">
+            <app-total-sale-unit></app-total-sale-unit>
         </div>
-    </div>
-    <div>
-        <app-revenue></app-revenue>
-        <app-create-report-card></app-create-report-card>
-        <app-daily-sale-card></app-daily-sale-card>
-        <app-summary-card></app-summary-card>
-        <app-total-order></app-total-order>
-        <app-transaction-card></app-transaction-card>
-        <app-news-update-card></app-news-update-card>
-        <app-account-info-card></app-account-info-card>
-        <app-date-picker-card></app-date-picker-card>
-        <app-top-global-sale></app-top-global-sale>
-        <app-invoice-table-card></app-invoice-table-card>
-        <app-top-selling-table></app-top-selling-table>
-        <app-popular-product-table></app-popular-product-table>
-        <app-market-valus-card></app-market-valus-card>
-        <app-total-sale-unit></app-total-sale-unit>
+        <div class="grid-report-card">
+            <app-create-report-card></app-create-report-card>
+        </div>
+        <div class="grid-daily-sale-card">
+            <app-daily-sale-card></app-daily-sale-card>
+        </div>
+        <div class="grid-summary-card">
+            <app-summary-card></app-summary-card>
+        </div>
+        <div class="grid-total-order">
+            <app-total-order></app-total-order>
+        </div>
+        <div class="grid-transaction-card">
+            <app-transaction-card></app-transaction-card>
+        </div>
+        <div class="grid-news-update-card">
+            <app-news-update-card></app-news-update-card>
+        </div>
+        <div class="grid-account-info-card">
+            <app-account-info-card></app-account-info-card>
+        </div>
+        <div class="grid-date-picker-card">
+            <app-date-picker-card></app-date-picker-card>
+        </div>
+        <div class="grid-top-global-sale">
+            <app-top-global-sale></app-top-global-sale>
+        </div>
+        <div class="grid-invoice-table-card">
+            <app-invoice-table-card></app-invoice-table-card>
+        </div>
+        <div class="grid-top-selling-table">
+            <app-top-selling-table></app-top-selling-table>
+        </div>
+        <div class="grid-popular-product-table">
+            <app-popular-product-table></app-popular-product-table>
+        </div>
+        <div class="grid-market-valus-card">
+            <app-market-valus-card></app-market-valus-card>
+        </div>
     </div>
 </div>

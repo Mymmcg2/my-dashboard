@@ -1,4 +1,97 @@
-.box-green-col-1 h1 {
-    margin-bottom: 0;
-    color: white;
+.grid-container {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(18, 136px);
+}
+
+.grid-revenue {
+    overflow: hidden;
+    grid-column: 1 / 9;
+    grid-row: 1 / 4;
+}
+
+.grid-sale-unit {
+    overflow: hidden;
+    grid-column: 9 / 13;
+    grid-row: 1 / 5;
+}
+
+.grid-report-card {
+    overflow: hidden;
+    grid-column: 1 / 9;
+    grid-row: 4 / 5;
+}
+
+.grid-daily-sale-card {
+    overflow: hidden;
+    grid-column: 1 / 5;
+    grid-row: 5 / 7;
+}
+
+.grid-summary-card {
+    overflow: hidden;
+    grid-column: 5 / 9;
+    grid-row: 5 / 7;
+}
+
+.grid-total-order {
+    overflow: hidden;
+    grid-column: 9 / 13;
+    grid-row: 5 / 7;
+}
+
+.grid-transaction-card {
+    overflow: hidden;
+    grid-column: 1 / 5;
+    grid-row: 7 / 10;
+}
+
+.grid-news-update-card{
+    overflow: hidden;
+    grid-column: 5 / 9;
+    grid-row: 7 / 10;
+}
+
+.grid-account-info-card{
+    overflow: hidden;
+    grid-column: 9 / 13;
+    grid-row: 7 / 10;
+}
+
+.grid-date-picker-card{
+    overflow: hidden;
+    grid-column: 1 / 5;
+    grid-row: 10 / 13;
+}
+
+.grid-top-global-sale{
+    overflow: hidden;
+    grid-column: 5 / 13;
+    grid-row: 10 / 13;
+}
+
+.grid-invoice-table-card{
+    overflow: hidden;
+    grid-column: 1 / 7;
+    grid-row: 13 / 16;
+}
+
+.grid-top-selling-table{
+    overflow: hidden;
+    grid-column: 7 / 13;
+    grid-row: 13 / 16;
+}
+
+.grid-popular-product-table{
+    overflow: hidden;
+    grid-column: 1 / 9;
+    grid-row: 16 / 19;
+}
+
+.grid-market-valus-card{
+    overflow: hidden;
+    grid-column: 9 / 13;
+    grid-row: 16 / 19;
 }

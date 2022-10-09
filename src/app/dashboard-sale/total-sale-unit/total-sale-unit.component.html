@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper">
     <div nz-row>
         <div nz-col nzSpan="12">
             <h4>Total Sales Unit</h4>
@@ -15,11 +15,42 @@
     <div>
         <h4 style="color: #c2e6df;">This Month Revenue</h4>
         <h2 style="color: white;">$57k</h2>
-        <h4 style="color: #c2e6df;"><span nz-icon nzType="arrow-up" nzTheme="outline"></span>14.5%Up From Last Month</h4>
+        <h4 style="color: #c2e6df;"><span nz-icon nzType="arrow-up" nzTheme="outline"></span>14.5%Up From Last Month
+        </h4>
     </div>
     <div>
         <h4 style="color: #c2e6df;">This Month Revenue</h4>
         <h2 style="color: white;">$57k</h2>
-        <h4 style="color: #c2e6df;"><span nz-icon nzType="arrow-up" nzTheme="outline"></span>14.5%Up From Last Month</h4>
+        <h4 style="color: #c2e6df;"><span nz-icon nzType="arrow-up" nzTheme="outline"></span>14.5%Up From Last Month
+        </h4>
+    </div>
+</div> -->
+<div style="height: 71vh;">
+    <div class="wrapper">
+        <div nz-row>
+            <div nz-col nzSpan="12">
+                <h4>Total Sales Unit</h4>
+            </div>
+            <div nz-col nzSpan="12" style="text-align: right;">
+                <span nz-icon nzType="more" nzTheme="outline" style="font-size: 20px; color: gray;"></span>
+            </div>
+        </div>
+        <div >
+            <canvas id="totalSalePolar">{{ chart }}</canvas>
+        </div>
+    </div>
+    <div class="footer-total-sale-card">
+        <div>
+            <h4 style="color: #c2e6df;">This Month Revenue</h4>
+            <h2 style="color: white;">$57k</h2>
+            <h4 style="color: #c2e6df;"><span nz-icon nzType="arrow-up" nzTheme="outline"></span>14.5%Up From Last Month
+            </h4>
+        </div>
+        <div>
+            <h4 style="color: #c2e6df;">This Month Revenue</h4>
+            <h2 style="color: white;">$57k</h2>
+            <h4 style="color: #c2e6df;"><span nz-icon nzType="arrow-up" nzTheme="outline"></span>14.5%Up From Last Month
+            </h4>
+        </div>
     </div>
 </div>

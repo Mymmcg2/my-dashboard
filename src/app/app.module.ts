@@ -61,6 +61,8 @@ import { TopSellingTableComponent } from './dashboard-sale/top-selling-table/top
 import { PopularProductTableComponent } from './dashboard-sale/popular-product-table/popular-product-table.component';
 import { MarketValusCardComponent } from './dashboard-sale/market-valus-card/market-valus-card.component';
 import { TotalSaleUnitComponent } from './dashboard-sale/total-sale-unit/total-sale-unit.component';
+import { HeaderDashboardComponent } from './dashboard-sale/header-dashboard/header-dashboard.component';
+import { DashboardService } from './dashboard-sale/dashboard.service';
 
 const icons: IconDefinition[] = [
   ShoppingFill,
@@ -101,6 +103,7 @@ registerLocaleData(en);
     PopularProductTableComponent,
     MarketValusCardComponent,
     TotalSaleUnitComponent,
+    HeaderDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -126,7 +129,8 @@ registerLocaleData(en);
     MapsModule
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: en_US },
+    DashboardService
   ],
   bootstrap: [AppComponent]
 })

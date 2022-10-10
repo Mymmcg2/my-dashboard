@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div>
+        <h3>Top Global Sales</h3>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <canvas id="topGlobalPie">{{ chart }}</canvas>
+    </div>
+    <div nz-row>
+        <div nz-col nzSpan="12">
+            <label>USA</label>
+            <nz-progress nzPercent="25" nzStrokeColor="orange" nzStatus="active"></nz-progress>
+            <label>Australia</label>
+            <nz-progress nzPercent="75" nzStatus="active"></nz-progress>
+        </div>
+        <div nz-col nzSpan="12">
+            <label>Brazil</label>
+            <nz-progress [nzPercent]="34" nzStrokeColor="green" nzStatus="active"></nz-progress>
+            <label>Latvia</label>
+            <nz-progress [nzPercent]="34" nzStrokeColor="pink" nzStatus="active"></nz-progress>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div nz-row style="margin-bottom: 20px;">
+        <div nz-col nzSpan="12">
+            <h4>Popular Products</h4>
+        </div>
+        <div nz-col nzSpan="12" style="text-align: right;">
+            <span nz-icon nzType="more" nzTheme="outline" style="font-size: 20px; color: gray;"></span>
+        </div>
+    </div>
+    <div class="table-container">
+        <nz-table #fixedTable [nzData]="listOfData" nzTableLayout="fixed" [nzPageSize]="8">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Product Code</th>
+                    <th>Price</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of fixedTable.data">
+                    <td>{{ data.product }}</td>
+                    <td>{{ data.productCode }}</td>
+                    <td nzEllipsis>{{ data.price }}</td>
+                    <td nzEllipsis>
+                        <nz-tag *ngIf="data.status === 'active'; else unactive " nzColor="success">354 sold</nz-tag>
+                    </td>
+                    <ng-template #unactive>
+                        <td nzEllipsis>
+                            <nz-tag nzColor="error">unactive</nz-tag>
+                        </td>
+                    </ng-template>
+                </tr>
+            </tbody>
+        </nz-table>
+        <button nz-button nzSize="large" nzType="primary">View All</button>
+    </div>
+</div>

@@ -1,12 +1,13 @@
 <app-header></app-header>
 
-<nz-layout style="height: 100vh;">
+<nz-layout>
     <nz-sider nzTheme="light" nzWidth="270px">
         <app-menu-side></app-menu-side>
     </nz-sider>
     <nz-layout>
-        <nz-content>
-            <app-content-header></app-content-header>
+        <app-content-header></app-content-header>
+        <app-header-dashboard *ngIf="onHeaderDashboard"></app-header-dashboard>
+        <nz-content style="padding: 25px;">
             <router-outlet></router-outlet>
         </nz-content>
     </nz-layout>

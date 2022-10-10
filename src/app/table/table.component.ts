@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { DashboardService } from '../dashboard-sale/dashboard.service';
+
 
 @Component({
   selector: 'app-table',
@@ -7,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+
   listOfData: Array<{ title: string; category: string; teacher: string; lesson: string; enrolled: string; price: string; status: string; }> = [];
 
-  constructor() { }
+  constructor(private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
+    this.dashboardService.setDashboardHeader(false)
     for (let i = 0; i < 11; i++) {
       this.listOfData.push({
         title: `Edward King`,

@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div nz-row style="margin-bottom: 25px;">
+        <div nz-col nzSpan="12">
+            <h4>Market valus</h4>
+        </div>
+        <div nz-col nzSpan="12" style="text-align: right;">
+            <button nz-button nz-dropdown [nzDropdownMenu]="menu4">
+                Button
+                <span nz-icon nzType="down"></span>
+            </button>
+            <nz-dropdown-menu #menu4="nzDropdownMenu">
+                <ul nz-menu>
+                    <li nz-menu-item>menu4 1st menu item</li>
+                    <li nz-menu-item>menu4 2nd menu item</li>
+                    <li nz-menu-item>menu4 3rd menu item</li>
+                </ul>
+            </nz-dropdown-menu>
+        </div>
+    </div>
+    <div class="graph-container">
+        <canvas id="marketRadar">{{ chart }}</canvas>
+    </div>
+</div>

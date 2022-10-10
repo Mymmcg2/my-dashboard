@@ -35,7 +35,7 @@ export class RevenueComponent implements OnInit {
         ]
       },
       options: {
-        aspectRatio: 2.5,
+        aspectRatio: 3,
         scales: {
           x: {
             grid: {

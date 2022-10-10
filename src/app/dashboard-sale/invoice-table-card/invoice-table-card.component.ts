@@ -12,7 +12,7 @@ export class InvoiceTableCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 4; i++) {
       this.listOfData.push({
         customer: `Customer`,
         product: 'Sunglass',

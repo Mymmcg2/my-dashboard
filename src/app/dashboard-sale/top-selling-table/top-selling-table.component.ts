@@ -12,7 +12,7 @@ export class TopSellingTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 4; i++) {
       this.listOfData.push({
         product: `Product 1`,
         price: '$564',

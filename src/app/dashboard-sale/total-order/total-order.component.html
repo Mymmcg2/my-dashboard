@@ -2,11 +2,13 @@
     <div class="flex-revenue-head">
         <div>
             <h4>Total Order</h4>
-            <h1>356</h1>
+            <h1 style="font-size: 80px;">356</h1>
         </div>
         <div>
             <nz-segmented nzSize="small" [nzOptions]="options" [nzBlock]="true"></nz-segmented>
-            <canvas id="totalOrderChart">{{ chart }}</canvas>
+            <div>
+                <canvas id="totalOrderChart">{{ chart }}</canvas>
+            </div>
         </div>
     </div>
 </div>

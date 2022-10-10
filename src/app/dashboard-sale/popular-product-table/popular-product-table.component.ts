@@ -12,7 +12,7 @@ export class PopularProductTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 3; i++) {
       this.listOfData.push({
         product: `Product`,
         productCode: '#DE2548',

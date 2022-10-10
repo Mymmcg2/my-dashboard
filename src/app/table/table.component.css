@@ -1,7 +1,8 @@
-.wrapper {
+.wrapper-table-card {
     background-color: white;
     border-radius: 6px;
     padding: 30px;
+    min-height: 750px
 }
 
 nz-badge {

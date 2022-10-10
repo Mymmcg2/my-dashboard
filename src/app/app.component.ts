@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DashboardService } from './dashboard-sale/dashboard.service';
 
 @Component({
@@ -9,13 +9,12 @@ import { DashboardService } from './dashboard-sale/dashboard.service';
 export class AppComponent implements OnInit {
   title = 'my-dashboard-add';
   isCollapsed = false;
-  onHeaderDashboard = false
-  running: any
-  constructor(private dashvoardService: DashboardService) { }
+  onHeaderDashboard:any
+  constructor(private dashvoardService: DashboardService ) { }
 
   ngOnInit(): void {
-    this.dashvoardService.running.subscribe((isRunning) => {
-      this.running = isRunning;
+    this.dashvoardService.dashboardHeader.subscribe((isDashboardHeader) => {
+      this.onHeaderDashboard = isDashboardHeader;
     });
   }
 

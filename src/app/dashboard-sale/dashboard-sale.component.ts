@@ -1,4 +1,4 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DashboardService } from './dashboard.service';
 
 @Component({
@@ -6,16 +6,11 @@ import { DashboardService } from './dashboard.service';
   templateUrl: './dashboard-sale.component.html',
   styleUrls: ['./dashboard-sale.component.css']
 })
-export class DashboardSaleComponent implements OnInit,OnDestroy {
+export class DashboardSaleComponent implements OnInit {
 
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit(): void {
-    this.dashboardService.setRunning(true)
+    this.dashboardService.setDashboardHeader(true)
   }
-
-  ngOnDestroy(){
-    this.dashboardService.setRunning(false)
-  }
-
 }

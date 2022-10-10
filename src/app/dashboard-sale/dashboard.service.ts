@@ -3,12 +3,12 @@ import { BehaviorSubject } from "rxjs";
 
 @Injectable()
 export class DashboardService {
-    private runningSubject: BehaviorSubject<boolean> = new BehaviorSubject(true);
-    running = this.runningSubject.asObservable();
+    private dashBoardHeaderSubject: BehaviorSubject<boolean> = new BehaviorSubject(true);
+    dashboardHeader = this.dashBoardHeaderSubject.asObservable();
 
     constructor() { }
 
-    setRunning = (value: boolean) => {
-        this.runningSubject.next(value);
+    setDashboardHeader = (value: boolean) => {
+        this.dashBoardHeaderSubject.next(value);
     }
 }

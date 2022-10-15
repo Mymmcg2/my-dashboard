@@ -17,8 +17,9 @@
             <button nz-button nzSize="large" nzType="primary">Add New</button>
         </div>
     </div>
-    <div class="data-table" >
-        <nz-table #fixedTable [nzData]="userData" nzTableLayout="fixed" [nzPageSize]="8">
+    <div class="data-table">
+        <nz-table #fixedTable [nzLoading]="isLoading" [nzData]="userData" nzTableLayout="fixed" [nzPageSize]="8"
+            [nzTotal]="80" (nzPageIndexChange)="changePageFetch($event)" [nzFrontPagination]="false" >
             <thead>
                 <tr>
                     <th>Name</th>

@@ -18,9 +18,9 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.dashboardService.setDashboardHeader(false)
-    this. isLoading = true
+    this.isLoading = true
     this.tableService.getUserData(1).subscribe((res: any) => {
-      this. isLoading = false
+      this.isLoading = false
       const user = res.results
       this.userData = user.map((users: any) => ({
         name: users.name.first + ' ' + users.name.last,
@@ -34,7 +34,20 @@ export class TableComponent implements OnInit {
     })
   }
 
-  changePageFetch(page: any){
-    console.log(page)
+  changePageFetch(page: any) {
+    this.isLoading = true
+    this.tableService.getUserData(page).subscribe((res: any) => {
+      this.isLoading = false
+      const user = res.results
+      this.userData = user.map((users: any) => ({
+        name: users.name.first + ' ' + users.name.last,
+        email: users.email,
+        gender: users.gender,
+        age: users.dob.age,
+        city: users.location.city,
+        state: users.location.state,
+        country: users.location.country
+      }))
+    })
   }
 }

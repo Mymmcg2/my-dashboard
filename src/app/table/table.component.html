@@ -17,37 +17,29 @@
             <button nz-button nzSize="large" nzType="primary">Add New</button>
         </div>
     </div>
-    <div class="data-table" >
-        <nz-table #fixedTable [nzData]="listOfData" nzTableLayout="fixed" [nzPageSize]="8">
+    <div class="data-table">
+        <nz-table #fixedTable [nzLoading]="isLoading" [nzData]="userData" nzTableLayout="fixed" [nzPageSize]="8"
+            [nzTotal]="80" (nzPageIndexChange)="changePageFetch($event)" [nzFrontPagination]="false" >
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Teacher</th>
-                    <th>Lesson</th>
-                    <th>Enrolled</th>
-                    <th>Price</th>
-                    <th>status</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Country</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let data of fixedTable.data">
-                    <td>{{ data.title }}</td>
-                    <td>{{ data.category }}</td>
-                    <td nzEllipsis>{{ data.teacher }}</td>
-                    <td nzEllipsis>{{ data.lesson }}</td>
-                    <td nzEllipsis>{{ data.enrolled }}</td>
-                    <td nzEllipsis>{{ data.price }}</td>
-                    <!-- <td nzEllipsis>{{ data.status }}</td> -->
-                    <td nzEllipsis>
-                        <nz-tag *ngIf="data.status === 'active'; else unactive " nzColor="success">active</nz-tag>
-                    </td>
-                    <ng-template #unactive>
-                        <td nzEllipsis>
-                            <nz-tag nzColor="error">unactive</nz-tag>
-                        </td>
-                    </ng-template>
-
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.email }}</td>
+                    <td nzEllipsis>{{ data.gender }}</td>
+                    <td nzEllipsis>{{ data.age }}</td>
+                    <td nzEllipsis>{{ data.state }}</td>
+                    <td nzEllipsis>{{ data.city }}</td>
+                    <td nzEllipsis>{{ data.country }}</td>
                 </tr>
             </tbody>
         </nz-table>

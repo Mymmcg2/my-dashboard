@@ -1,5 +1,7 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../dashboard-sale/dashboard.service';
+import { TableModel } from './table.model';
+import { TableService } from './table.service';
 
 
 @Component({
@@ -9,23 +11,43 @@ import { DashboardService } from '../dashboard-sale/dashboard.service';
 })
 export class TableComponent implements OnInit {
 
+  userData!: TableModel[]
+  isLoading!: boolean
 
-  listOfData: Array<{ title: string; category: string; teacher: string; lesson: string; enrolled: string; price: string; status: string; }> = [];
-
-  constructor(private dashboardService: DashboardService) { }
+  constructor(private dashboardService: DashboardService, private tableService: TableService) { }
 
   ngOnInit(): void {
     this.dashboardService.setDashboardHeader(false)
-    for (let i = 0; i < 11; i++) {
-      this.listOfData.push({
-        title: `Edward King`,
-        category: 'Category name',
-        teacher: `Teacher James`,
-        lesson: 'Lessons name	',
-        enrolled: '16',
-        price:'$25.00	',
-        status:'active'
-      });
-    }
+    this.isLoading = true
+    this.tableService.getUserData(1).subscribe((res: any) => {
+      this.isLoading = false
+      const user = res.results
+      this.userData = user.map((users: any) => ({
+        name: users.name.first + ' ' + users.name.last,
+        email: users.email,
+        gender: users.gender,
+        age: users.dob.age,
+        city: users.location.city,
+        state: users.location.state,
+        country: users.location.country
+      }))
+    })
+  }
+
+  changePageFetch(page: any) {
+    this.isLoading = true
+    this.tableService.getUserData(page).subscribe((res: any) => {
+      this.isLoading = false
+      const user = res.results
+      this.userData = user.map((users: any) => ({
+        name: users.name.first + ' ' + users.name.last,
+        email: users.email,
+        gender: users.gender,
+        age: users.dob.age,
+        city: users.location.city,
+        state: users.location.state,
+        country: users.location.country
+      }))
+    })
   }
 }
